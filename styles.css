@@ -1,0 +1,730 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(255, 154, 0);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: rgb(243, 124, 6);
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px; /* Add space between links */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(19, 13, 13);
+  padding: 15px 20px;
+  display: block;
+  position: relative; /* Required for absolute positioning of underline */
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  width: calc(100% - 40px); /* Adjusted width for the underline */
+  height: 4px; /* Increased thickness of the underline */
+  bottom: 0;
+  left: 50%; /* Start the underline from the center */
+  transform: translateX(-50%); /* Center the underline */
+  background-color: transparent;
+  transition: width 0.3s ease-in-out; /* Transition width only */
+}
+
+nav ul li a:hover::before {
+  width: 100%; /* Extend the underline to the end */
+  background-color: rgb(17, 14, 14); /* Color of the underline */
+}
+
+nav ul li a:hover {
+  color: rgb(17, 14, 14);
+}
+
+
+main {
+  padding: 20px;
+}
+
+/* Specific styles for desserts page */
+.desserts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dessert-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.dessert-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dessert-item h3 {
+  margin-top: 10px;
+}
+
+.dessert-item p {
+  font-style: italic;
+  color: gray;
+}
+
+/* Specific styles for drinks page */
+.drinks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.drink-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.drink-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.drink-item h3 {
+  margin-top: 10px;
+}
+
+.drink-item p {
+  font-style: italic;
+  color: gray;
+}
+
+/* Specific styles for gifts page */
+.gifts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gift-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.gift-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gift-item h3 {
+  margin-top: 10px;
+}
+
+.gift-item p {
+  font-style: italic;
+  color: gray;
+}
+
+/* Specific styles for offers page */
+.offers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.offer-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.offer-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.offer-item h3 {
+  margin-top: 10px;
+}
+
+.offer-item p {
+  font-style: italic;
+  color: gray;
+}
+
+/* Specific styles for side orders page */
+.side-orders-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.side-order-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.side-order-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.side-order-item h3 {
+  margin-top: 10px;
+}
+
+.side-order-item p {
+  font-style: italic;
+  color: gray;
+}
+
+/* styles.css */
+footer {
+  background-color: rgb(243, 124, 6);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+}
+/* Add this code to the end of your style.css file */
+
+.pizza-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pizza-item {
+  margin: 20px;
+  text-align: center;
+}
+/* Add this code to the end of your style.css file */
+
+.pizza-item img {
+  border-radius: 10px; /* Adjust the value as needed */
+}
+/* Add this CSS to your styles.css file */
+
+.contact-form {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  border: 2px solid #f26522;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #f26522;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: calc(100% - 22px); /* Adjust input width */
+  padding: 10px;
+  border: 1px solid #f26522;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d35400;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group textarea::placeholder {
+  color: #ccc;
+}
+
+/* Animation */
+.form-group input[type="text"]:not(:focus),
+.form-group input[type="email"]:not(:focus),
+.form-group textarea:not(:focus) {
+  opacity: 0.8;
+}
+
+.form-group input[type="text"]:hover,
+.form-group input[type="email"]:hover,
+.form-group textarea:hover {
+  border-color: #d35400;
+}
+
+.form-group input[type="text"]:hover + label,
+.form-group input[type="email"]:hover + label,
+.form-group textarea:hover + label {
+  color: #d35400;
+}
+
+/* Animation */
+.form-group input[type="text"]:hover,
+.form-group input[type="email"]:hover,
+.form-group textarea:hover {
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.form-group button {
+  padding: 10px 20px;
+  background-color: #f26522;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+  background-color: #d35400;
+  color: #fff;
+}
+
+/* Add this CSS to your styles.css file */
+
+/* Header animation */
+header h1 {
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigation animation */
+nav {
+  animation: fadeInLeft 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Main content animation */
+main {
+  animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Footer animation */
+footer {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Add this CSS to your styles.css file */
+
+/* Product box animation */
+.prod_box {
+  animation: slideInUp 1s ease-out;
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Product picture animation */
+.prod_pic img {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Add this CSS to your styles.css file */
+
+/* Side orders container animation */
+.sideorders-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Side order item animation */
+.sideorder-item {
+  flex: 0 1 calc(33.333% - 20px);
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Add this CSS to your styles.css file */
+
+/* Offers container animation */
+.offers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Offer item animation */
+.offer-item {
+  flex: 0 1 calc(33.333% - 20px);
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Add this CSS to your styles.css file */
+
+/* Container animation */
+.desserts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dessert item animation */
+.dessert-item {
+  flex: 0 1 calc(33.333% - 20px);
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Add this CSS to your styles.css file */
+
+/* Container animation */
+.drinks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Drink item animation */
+.drink-item {
+  flex: 0 1 calc(33.333% - 20px);
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Add this CSS to your styles.css file */
+
+/* Container animation */
+.gifts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gift item animation */
+.gift-item {
+  flex: 0 1 calc(33.333% - 20px);
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Define keyframes for scrollbar animation */
+@keyframes scrollBarAnimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Apply animation to the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  background-color: transparent; /* Background color of the scrollbar track */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 154, 0); /* Color of the scrollbar handle */
+  border-radius: 5px; /* Border radius of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(243, 124, 6); /* Color of the scrollbar handle on hover */
+}
+
+/* Animate scrollbar */
+::-webkit-scrollbar-thumb {
+  animation: scrollBarAnimation 0.5s ease-in-out forwards; /* Apply animation to scrollbar handle */
+}
+/* CSS styling for the blocked message */
+.blocked-message {
+  position: fixed;
+  top: 50%; /* Adjust vertical position as needed */
+  left: 50%; /* Adjust horizontal position as needed */
+  transform: translate(-50%, -50%);
+  background: rgba(255, 0, 0, 0.8); /* Red background with some transparency */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s; /* Smooth transition for opacity and transform */
+}
+
+/* Animation for the blocked message */
+.blocked-message.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.gifts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gift-item {
+  width: 250px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.gift-item img {
+  max-width: 100%;
+  max-height: 200px; /* Adjust as needed */
+  margin-bottom: 10px;
+}
+
+.gift-item h3,
+.gift-item p {
+  margin: 0;
+}
+
+.gift-item p {
+  font-weight: bold;
+}

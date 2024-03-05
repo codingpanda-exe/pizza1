@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Pizza as you want</title>
+
+  <!--css link-->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="nav.css" />
+  
+  <style>
+    #slider {
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    #slider figure {
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      animation: 5s slider infinite;
+    }
+
+    #slider figure img {
+      float: left;
+      width: 20%;
+    }
+
+    @keyframes slider {
+      0% {
+        left: 0;
+      }
+
+      20% {
+        left: 0;
+      }
+
+      25% {
+        left: -100%;
+      }
+
+      45% {
+        left: -100%;
+      }
+
+      50% {
+        left: -200%;
+      }
+
+      70% {
+        left: -200%;
+      }
+
+      95% {
+        left: -300%;
+      }
+
+      100% {
+        left: -400%;
+      }
+    }
+
+    .contain {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .prod_box {
+      width: 300px;
+      margin: 20px;
+    }
+
+    .prod_pic {
+      position: relative;
+      text-align: center;
+    }
+
+    .prod_pic img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .prod_price {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!--header-->
+  <header>
+    <center>
+      <h1>Pizza as you WANT</h1>
+    </center>
+  </header>
+
+  <!--navigation-->
+  <nav>
+    <ul>
+      <li>
+        <a title=" Back to home" href="index.html">Home</a>
+      </li>
+      <li>
+        <a title=" Pizza" href="pizza.html">Pizza</a>
+      </li>
+      <li>
+        <a title="Side orders" href="sideorders.html">Side orders</a>
+      </li>
+      <li>
+        <a title=" Offers" href="offers.html">Offers</a>
+      </li>
+      <li>
+        <a title=" Desserts" href="desserts.html">Desserts</a>
+      </li>
+      <li>
+        <a title=" Drinks" href="drinks.html">Drinks</a>
+      </li>
+      <li>
+        <a title=" Gifts" href="gifts.html">Gifts </a>
+      </li>
+      <li>
+        <a title=" Ways to contact us" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!--Main-->
+  <main>
+    <!--Slider-->
+    <div id="slider">
+      <figure>
+        <img src="homepagr/slideshow1.jpg" height="700" width="150px"/>
+        <img src="homepagr/slideshow2.jpg" height="700" width="150px"/>
+        <img src="homepagr/slideshow3.jpg" height="700" width="150px"/>
+      </figure>
+    </div>
+
+    <!--Products-->
+    <div class="contain">
+      <div class="prod_box">
+        <div class="prod_pic">
+          <img src="homepagr/pizzahome.jpg" />
+          <div class="prod_price">
+            <p>Name: Margherita</p>
+            <p>Price: £20</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod_box">
+        <div class="prod_pic">
+          <img src="homepagr/pizzahome2.jpg" />
+          <div class="prod_price">
+            <p>Name: Triple mushroom</p>
+            <p>Price: £19</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod_box">
+        <div class="prod_pic">
+          <img src="homepagr/pizzahome3.jpg" />
+          <div class="prod_price">
+            <p>Name: pepperoni</p>
+            <p>Price: £18.99</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </main>
+
+  <!--footer of the page-->
+  <footer>
+    <h5>&copy; Pizza As You Want 2023</h5>
+</footer>
+</body>
+
+
+
+</html>
